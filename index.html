@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThingsBoard Data Fetcher</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+        }
+        input, select, button {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>ThingsBoard Data Fetcher</h2>
+        <input type="text" id="deviceID" placeholder="Device ID">
+        <input type="text" id="keys" placeholder="Keys (comma-separated)">
+        <input type="number" id="startTs" placeholder="Start Timestamp (milliseconds)">
+        <input type="number" id="endTs" placeholder="End Timestamp (milliseconds)">
+        <input type="number" id="limit" placeholder="Limit">
+        <select id="orderBy">
+            <option value="ASC">Ascending</option>
+            <option value="DESC">Descending</option>
+        </select>
+        <button onclick="fetchData()">Fetch and Download Data</button>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+</html>
